@@ -1,3 +1,5 @@
+// Called when the pipeline starts
+// to verify the word is not an empty string
 def verify_word(check_word) {
     def empty_word = (check_word =~ /^( )+$/) || ((params.word).length() == 0)
 
@@ -8,6 +10,8 @@ def verify_word(check_word) {
     }
 }
 
+// Calls python inside the slave containers
+// to check the meaning of the word
 def get_word(check_word) {
     return sh(
         returnStdout: true,
@@ -15,6 +19,9 @@ def get_word(check_word) {
     )
 }
 
+// Verifies the word has a short meaning
+// and fails the stage "Search word" stage if meaning
+// is not found
 def show_word(word_output) {
     def meaning = (word_output =~ /((SHORT MEANING:( )+)(.*))/)
 
@@ -91,6 +98,9 @@ pipeline {
                 }
             }
         }
+        
+        // Continues to this "blank" stage
+        // even if the "Search word" stage has failed
         stage ('Explanation') {
             agent any
             steps {
