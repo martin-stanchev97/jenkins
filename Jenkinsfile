@@ -18,7 +18,6 @@ def get_word(check_word) {
         script: "echo $check_word | python3 ./Scripts/P06_GetMeaning.py"
     )
     
-    currentBuild.description = word_output
     return word_output
 }
 
@@ -32,6 +31,7 @@ def show_word(word_output) {
         error('No such word: ' + params.word)
     } else {
         echo meaning[0][4]
+        currentBuild.description = meaning[0][4]
     }
 }
 
