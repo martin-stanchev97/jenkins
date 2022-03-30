@@ -30,8 +30,8 @@ def show_word(word_output) {
     if (!meaning) {
         error('No such word: ' + params.word)
     } else {
-        echo meaning[0]
-        currentBuild.description = meaning[0]
+        echo meaning[0][4]
+        currentBuild.description = meaning[0][4]
     }
 }
 
