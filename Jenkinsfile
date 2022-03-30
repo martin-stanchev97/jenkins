@@ -13,10 +13,13 @@ def verify_word(check_word) {
 // Calls python inside the slave containers
 // to check the meaning of the word
 def get_word(check_word) {
-    return sh(
+    def word_output = sh(
         returnStdout: true,
         script: "echo $check_word | python3 ./Scripts/P06_GetMeaning.py"
     )
+    
+    def currentBuild.description = word_output
+    return word_output
 }
 
 // Verifies the word has a short meaning
