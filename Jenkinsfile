@@ -18,7 +18,7 @@ def get_word(check_word) {
         script: "echo $check_word | python3 ./Scripts/P06_GetMeaning.py"
     )
     
-    def currentBuild.description = word_output
+    currentBuild.description = word_output
     return word_output
 }
 
