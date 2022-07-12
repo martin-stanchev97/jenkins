@@ -1,5 +1,6 @@
 Parameter | Ex. Value | Action
 --- | --- | ---
+`dawdawwaa`
 `--secured` | `None` | *Activates enginetls and kerberos MIT*
 `--engine-tls,  -etls`  | `None` | *Activates enginetls*
 `--platform-outbound-security-query-roles[0-9],  -posqr[0-9]`  | `"role1, role2, ..., roleN"` | *Sets query roles for platform [0-9]*
