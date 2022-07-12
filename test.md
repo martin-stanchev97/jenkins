@@ -1,4 +1,4 @@
-*Installation params*
+<b>Installation params</b>
 Parameter | Ex. Value | Action
 --- | --- | ---
 `--secured` | `None` | *Activates enginetls and kerberos MIT*
