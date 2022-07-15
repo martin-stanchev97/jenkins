@@ -12,6 +12,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--manual-install` | <p>Run containers without AtScale installed</p> | <p>-</p> | <p>-</p> | <p></p>
 `--container-group, -cg` | <p>Container group to use for the containers</p> | <p>string</p> | <p>-</p> | <p></p>
 `--container-group-filename` | <p>Choose a custom path to a file to keep data for the container group</p> | <p>string -> path to file</p> | <p>-</p> | <p></p>
+
+
+
 <b>AtScale params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -74,11 +77,17 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--external-modeler, ** Deprecated` | <p>utils/configure-external.sh script should be used to set external modeler</p> | <p>-</p> | <p>-</p> | <p></p>
 `--external-account, ** Deprecated` | <p>utils/configure-external.sh script should be used to set external account</p> | <p>-</p> | <p>-</p> | <p></p>
 `--interactive-mode, ** Unknown usage` | <p>If provided it disables AtScale dataloader, but besides that I did not find any use</p> | <p>-</p> | <p>-</p> | <p></p>
+
+
+
 <b>AtScale SaaS params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
 `--infraapi-branch, -iab` | <p>Full branch name that will be used for the InfraAPI</p><p>Valid only when running run-atscale-saas.sh, instead of run-atscale.sh</p> | <p>string</p> | <p>-</p> | <p></p>
 `--infraapi-version, -iav` | <p>Full version that will be used for the InfraAPI</p><p>Valid only when running run-atscale-saas.sh, instead of run-atscale.sh</p> | <p>string</p> | <p>-</p> | <p></p>
+
+
+
 <b>AtScale virtualization cluster params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -88,6 +97,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--as-virtualization-configured, -vconf` | <p>Activates virtualization cluster with 5 AtScale compute nodes</p> | <p>-</p> | <p>-</p> | <p>Env: $AS_VIRTUALIZATION_CONF</p>
 `--as-virtualization-large, -vlarge` | <p>Activates virtualization cluster with 12 AtScale compute nodes</p> | <p>-</p> | <p>-</p> | <p>Env: $AS_VIRTUALIZATION_LARGE</p>
 `--as-virtualization-large-configured, -vlargeconf` | <p>Activates virtualization cluster with 12 AtScale compute nodes</p> | <p>-</p> | <p>-</p> | <p>Env: $AS_VIRTUALIZATION_LARGE_CONF</p>
+
+
+
 <b>Querytester params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -101,6 +113,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--querytester-output, -qt-output` | <p>Output format from the Querytester</p> | <p>string</p> | <p>json</p><p>xml</p> | <p></p>
 `--no-tests` | <p>Skip tests</p> | <p>-</p> | <p>-</p> | <p></p>
 `--no-kill` | <p>Keep Querytester containers running after tests are completed</p> | <p>-</p> | <p>-</p> | <p></p>
+
+
+
 <b>Nightwatch params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -116,6 +131,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--infraapi-dnsfix, -iadns` | <p>Configures DNS configuration for Nightwatch in /modeler/nightwatch.conf.js</p> | <p>-</p> | <p>-</p> | <p>Change ends up in /modeler/nightwatch.conf.js</p>
 `--nightwatch-default-schema, -nwds, ** Unknown usage` | <p>Unknown usage</p> | <p>string</p> | <p>-</p> | <p>Env: $NIGHTWATCH_DEFAULT_SCHEMA</p>
 `--nightwatch-pre-upgrade-branch, -nwdup, ** Unknown usage` | <p>Unknown usage</p> | <p>string</p> | <p>-</p> | <p>Env: $NIGHTWATCH_PRE_UPGRADE_BRANCH</p>
+
+
+
 <b>Hadoop params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -126,6 +144,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--multiple-impalas` | <p>Indicates whether to use multiple impala instances for the SQL query engine</p> | <p>-</p> | <p>-</p> | <p>Env: $MULTIPLE_IMPALAS</p><p>Used in set-hadoop-param.sh</p>
 `--tez-am-memory` | <p>Memory, in megabytes, available to Tez master</p> | <p>number</p> | <p>-</p> | <p>Env: $HIVE_PARAMETERS</p><p>Used in set-hadoop-param.sh</p><p>Change ends up in /etc/hive/conf/tez-site.xml</p>
 `--tez-container-memory` | <p>Memory, in megabytes, available to each Tez container</p> | <p>number</p> | <p>-</p> | <p>Env: $HIVE_PARAMETERS</p><p>Used in set-hadoop-param.sh</p><p>Change ends up in /etc/hive/conf/tez-site.xml</p>
+
+
+
 <b>Spark params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -133,11 +154,17 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--spark-driver-memory` | <p>Memory, in megabytes, available to the Spark driver</p> | <p>number</p> | <p>-</p> | <p>Env: $ATSCALE_SPARK_PARAMETERS, $HIVE_PARAMETERS</p><p>Used in set-hadoop-param.sh</p><p>Change ends up in /etc/spark2/conf/spark-defaults.conf</p>
 `--spark-executor-memory` | <p>Memory, in megabytes, available to each Spark executor instance</p> | <p>number</p> | <p>-</p> | <p>Env: $ATSCALE_SPARK_PARAMETERS, $HIVE_PARAMETERS</p><p>Used in set-hadoop-param.sh</p><p>Change ends up in /etc/spark2/conf/spark-defaults.conf</p>
 `--spark-executor-instances` | <p>Count for Spark executor nodes</p> | <p>number</p> | <p>-</p> | <p>Env: $ATSCALE_SPARK_PARAMETERS, $HIVE_PARAMETERS</p><p>Used in set-hadoop-param.sh</p><p>Change ends up in /etc/spark2/conf/spark-defaults.conf</p>
+
+
+
 <b>Zookeeper params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
 `--zookeeper-version, -zkv` | <p>Optionally, modify the Zookeeper version that will be used</p> | <p>string</p> | <p>-</p> | <p></p>
 `--zookeeper-count, -zkc` | <p>Choose nodes count for Zookeeper</p> | <p>number</p> | <p>-</p> | <p></p>
+
+
+
 <b>Docker mount params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -145,6 +172,9 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--as-expose` | <p>Mount chosen local expose directory into the atscale container in /opt/atscale</p> | <p>string -> path to directory, containing an atscale expose directory</p> | <p>-</p> | <p>Env: $AS_EXPOSE</p>
 `--hadoop-expose` | <p>Mount chosen local data directory into the hadoop container in /data</p> | <p>string -> path to directory, containing a hadoop data directory </p> | <p>-</p> | <p>Env: $HADOOP_EXPOSE</p>
 `--keep-state` | <p>Expose both /opt/atscale and /data without overwriting directory state</p> | <p>string -> path to directory</p> | <p>-</p> | <p>Env: $KEEP_STATE</p>
+
+
+
 <b>Logging params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
@@ -157,3 +187,6 @@ Parameter alias | Description | Expected value | Choices | Code remarks
 `--as-governance-dev` | <p>Enables Governance services</p> | <p>-</p> | <p>-</p> | <p>Env: $ATSCALE_PARAMETERS</p><p>Used in set-atscale-param.sh</p><p>Change ends up in atscale.yaml</p>
 `--cct-version, -cctv, ** Unknown usage` | <p>Unknown usage</p> | <p>string</p> | <p>-</p> | <p></p>
 `--count-containers, -cc, ** Unknown usage` | <p>Unknown usage</p> | <p>-</p> | <p>-</p> | <p></p>
+
+
+
