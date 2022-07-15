@@ -4,7 +4,8 @@ can update the tables in this file using <b>params-manage.sh</b> script. It will
 <b>PARAMETERS.yaml</b> and the <b>AtScale docker parameters</b> confluence page.
 
 
-            <b>Installation params</b>
+
+<b>Installation params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
 `--from-s3` | <p>Use S3 as a download source for AtScale images</p> | <p>-</p> | <p>-</p> | <p></p>
