@@ -1,7 +1,7 @@
 <b>Installation params</b>
 Parameter alias | Description | Expected value | Choices | Code remarks
 --- | --- | --- | --- | ---
-<p><code>--from-s3</code></p> | <p>Use S3 as a download source for AtScale images</p> | <p>-</p> | <p>-</p> | <p></p>
+<p>--from-s3</p> | <p>Use S3 as a download source for AtScale images</p> | <p>-</p> | <p>-</p> | <p></p>
 `--offline` | <p>Use the local configured repository as a download source for AtScale images</p> | <p>-</p> | <p>-</p> | <p></p>
 `--os` | <p>Choose OS type for the AtScale containers</p> | <p>string</p> | <p>centos</p><p>centos8</p><p>ubuntu</p> | <p></p>
 `--ip-address` | <p>Choose a custom subnet mask for the AtScale container group</p> | <p>string -> CIDR notation syntax</p> | <p>-</p> | <p></p>
